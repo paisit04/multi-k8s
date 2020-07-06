@@ -10,6 +10,6 @@ docker push paisit04/multi-worker:latest
 docker push paisit04/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployment/server-deployment client=paisit04/multi-server:$SHA
+kubectl set image deployment/server-deployment server=paisit04/multi-server:$SHA
 kubectl set image deployment/client-deployment client=paisit04/multi-client:$SHA
-kubectl set image deployment/worker-deployment client=paisit04/multi-worker:$SHA
+kubectl set image deployment/worker-deployment worker=paisit04/multi-worker:$SHA
